@@ -43,4 +43,4 @@ This table contains events specific to the sending of emails. It is similar in s
 | --- | --- |
 |user_id|	The ID of the user to whom the event relates. Can be joined to user_id in either of the other tables|
 |occurred_at|	The time the event occurred|
-|action|	The name of the event that occurred. "sent_weekly_digest" means that the user was delivered a digest email showing relevant conversations from the previous day. "email_open" means that the user opened the email. "email_clickthrough" means that the user clicked a link in the email|
+|action|	The name of the event that occurred. "sent_weekly_digest" means that the user was delivered a digest email showing relevant conversations from the previous day. "email_open" means that the user opened the email. "email_clickthrough" means that the user clicked a link in the email. "sent_reengagement_email" means that the inactive user received an re-engagement email.|
