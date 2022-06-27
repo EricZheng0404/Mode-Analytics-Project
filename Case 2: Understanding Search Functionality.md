@@ -232,7 +232,7 @@ For the improvement of the search function, I recommend:
 2. Improve the search ranking algorithm
 3. Improve language localization 
 
-I would suggest working on recommendation 1 and 2 first. Of limited engineering resource, I need to prioritize the recommendation that has the most impact on the achieving the goal, which is to help users find what they are looking for with with shorter time and fewer clicks.
+I would suggest working on recommendation 1 and 2 first. Of limited engineering resource, I need to prioritize the recommendation that has the most impact on achieving the goal, which is to help users find what they are looking for with shorter time and fewer clicks.
 
 # Question 4: If the recommendations will be completed, how to understand the recommendations are actually improvements of the old search function?
 
@@ -241,11 +241,10 @@ The improvement metrics are the same as the success metrics of the function:
 2. Churn rate
 3. Average session duration
 
-If more users keep using the function, less users turning away from it, and the average search session is getting shorter, then I know the search function is 
-making progress over the old search function.
+If more users keep using the function, less users turning away from it, and the average search session is getting shorter, then I know the search function is making progress over the old search function.
 
-# Reflection (what should I do better)
-1. Really understand what each column and each value mean. I misunderstood what `search_autocomplete` mean in the first place. When I realized my mistake, I need to redo everything for the very beginning, which was frustrating and time-consuming. DO UNDERSTAND THE CONTEXT BEFORE DIVING INTO THE QUESTION.
+# Reflection (what I can do better next time)
+1. Really understand what each column and each value mean. I misunderstood what `search_autocomplete` mean in the first place. When I realized my mistake, I had to redo everything from the very beginning, which was frustrating and time-consuming. **DO UNDERSTAND THE CONTEXT BEFORE DIVING INTO THE QUESTION.**
 2. Redefine the success metric. `retention_rate` and `churn_rate` are good metrics, but is not the best in the context of the search function. I should find some better metrics to gauge how is the search function per se.
 3. Understand more about A/B testing. I know all along that A/B testing is often used in business analysis. Really should check that out.
 
