@@ -156,38 +156,8 @@ This in turn would result in more revenue for the company. The effort and time w
 
 # Question 3. If search is worth working on, what, specifically, should be improved?
 
-## Increase user awareness of the search function
-Users who used the search function accounted for about 18% to 22% of all the active users of Yammer service, which is not very high.
-It is possible that some users simply did not realize the existence of the function, or they did not understand how to use it.
-There should be a tutorial for first-time users of the search function, showing them how to use it step by step.
-
-```
-WITH active_user AS (SELECT DATE_TRUNC('month', created_at) AS month,
-      COUNT(DISTINCT user_id) AS active_user_count
-FROM tutorial.yammer_users
-WHERE state='active'
-GROUP BY month)
-
-, search_user AS (
-SELECT DATE_TRUNC('month', occurred_at) AS month,
-      COUNT(DISTINCT user_id) AS search_user_count
-FROM tutorial.yammer_events 
-
-WHERE event_name LIKE 'search%'
-GROUP BY month
-)
-
-SELECT 
-  active.month, 
-  SUM(active.active_user_count) OVER (ORDER BY active.month) AS running_total_active_user,
-  search.search_user_count,
-  search.search_user_count*1.00/SUM(active.active_user_count) OVER (ORDER BY active.month)*100 AS percentage
-FROM active_user active
-LEFT JOIN search_user search 
-ON active.month = search.month
-```
-
-<img width="468" alt="image" src="https://user-images.githubusercontent.com/32259752/175233114-72456061-54fa-4ec1-8527-1f7a9b801f81.png">
+## Define the goal
+I want to define the goal of improvement of the search function as users could find what they are looking with with shorter time and fewer clicks.
 
 ## Improve the autocomplete algorithm
 
@@ -258,15 +228,13 @@ ORDER BY 4
 
 ## Summary
 For the improvement of the search function, I recommend:
-1. Increase user awareness of the search function
-2. Improve the autocomplete algorithm
-3. Improve the search ranking algorithm
-4. Improve language localization 
 
-I would suggest working on recommendation 1 first. Of limited engineering resource, we need to prioritize which recommendation has the most impact. 
-For a search function, the smoother users can find the result, the more willing they are to use the function. 
-For this aspect, I would say autocomplete is the most convenient way to 
-access the result. The improvement of this function would greatly increase the confidence of the users in the search function.
+1. Improve the autocomplete algorithm
+2. Improve the search ranking algorithm
+3. Improve language localization 
+
+I would suggest working on recommendation 1 and 2 first. Of limited engineering resource, I need to prioritize the recommendation that has the most impact on the achieving the goal. 
+It would be a simplification of the current user experience if users could find the autocomplete give them the intended results without clicking into the result page or they could find the intended results high up in the result page, 
 
 # Question 4: If the recommendations will be completed, how to understand the recommendations are actually improvements of the old search function?
 
@@ -278,6 +246,10 @@ The improvement metrics are the same as the success metrics of the function:
 If more users keep using the function, less users turning away from it, and the average search session is getting shorter, then I know the search function is 
 making progress over the old search function.
 
+# Reflection (what should I do better)
+1. Really understand what each column and each value mean. I misunderstood what `search_autocomplete` mean in the first place. When I realized my mistake, I need to redo everything for the very beginning, which was frustrating and time-consuming. DO UNDERSTAND THE CONTEXT BEFORE DIVING INTO THE QUESTION.
+2. Redefine the success metric. `retention_rate` and `churn_rate` are good metrics, but is not the best in the context of the search function. I should find some better metrics to gauge how is the search function per se.
+3. Understand more about A/B testing. I know all along that A/B testing is often used in business analysis. Really should check that out.
 
 
 
