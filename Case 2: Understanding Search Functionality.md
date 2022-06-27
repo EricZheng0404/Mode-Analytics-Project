@@ -157,7 +157,7 @@ This in turn would result in more revenue for the company. The effort and time w
 # Question 3. If search is worth working on, what, specifically, should be improved?
 
 ## Define the goal
-I want to define the goal of improvement of the search function as users could find what they are looking with with shorter time and fewer clicks.
+I want to define the goal of improvement of the search function as users could find what they are looking for with shorter time and fewer clicks.
 
 ## Improve the autocomplete algorithm
 
@@ -199,8 +199,7 @@ ORDER BY 2 DESC
 The customer experience of the search function vary in different languages because localization could be a challenge for search 
 function enginnering team. I want to study users by languages.
 
-From the query, I can see that we lost most search users in English, French, and Spainish. So, we can improve the function by providing better 
-search experiences for these language users.
+From the query, I can see that we lost most search users in English, French, and Spainish. So, we can improve the function by investigating why we lost these users and providing better search experiences for these language users. 
 
 ```
 WITH language_segment AS (
@@ -233,8 +232,7 @@ For the improvement of the search function, I recommend:
 2. Improve the search ranking algorithm
 3. Improve language localization 
 
-I would suggest working on recommendation 1 and 2 first. Of limited engineering resource, I need to prioritize the recommendation that has the most impact on the achieving the goal. 
-It would be a simplification of the current user experience if users could find the autocomplete give them the intended results without clicking into the result page or they could find the intended results high up in the result page, 
+I would suggest working on recommendation 1 and 2 first. Of limited engineering resource, I need to prioritize the recommendation that has the most impact on the achieving the goal, which is to help users find what they are looking for with with shorter time and fewer clicks.
 
 # Question 4: If the recommendations will be completed, how to understand the recommendations are actually improvements of the old search function?
 
