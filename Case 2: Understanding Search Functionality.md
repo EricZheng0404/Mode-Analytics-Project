@@ -258,9 +258,10 @@ ORDER BY 4
 
 ## Summary
 For the improvement of the search function, I recommend:
-1. Improve the autocomplete algorithm
-2. Improve the search ranking algorithm
-3. Improve language localization 
+1. Increase user awareness of the search function
+2. Improve the autocomplete algorithm
+3. Improve the search ranking algorithm
+4. Improve language localization 
 
 I would suggest working on recommendation 1 first. Of limited engineering resource, we need to prioritize which recommendation has the most impact. 
 For a search function, the smoother users can find the result, the more willing they are to use the function. 
